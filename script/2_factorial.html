@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <script>
+        var n = prompt("Introduzca un número:");
+        var factorial = calcularFactorial(n);
+
+        document.write("El factorial es " + factorial);
+
+        function calcularFactorial(numero) {
+            var resultado = 1;
+            for (var i = 1; i <= numero; i++) {
+                resultado *= i;
+            }
+            return resultado;
+        }
+    </script>
+</body>
+</html>
