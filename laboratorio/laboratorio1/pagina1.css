@@ -1,0 +1,46 @@
+
+.celeste {
+    color: #4c9BD3;
+}
+.azul{
+    color: #366F91;
+}
+.bg-rojo{
+    background-color: #FF0000;
+}
+.bg-amarillo {
+    background-color: #ffff00;
+}
+.bg-celeste {
+    background-color: #4c9BD3;
+}
+.bg-zul{
+    color: #366F91;
+}
+.bg-plomo{
+    color: grey;
+}
+
+.contenedor {
+    width: 700px;
+    display: flex;
+    background-color: #FF0000;
+}
+
+.contenedor1{
+    width: 120px;
+    height: 100px;
+    display: flex;
+    margin:auto;
+    border-right: black;
+
+}
+
+.contenedor2{
+    width: 700px;
+    display: flex;
+    margin:auto;
+    flex-wrap: wrap;
+    background-color:#ffff00;
+}
+

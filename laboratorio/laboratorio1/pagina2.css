@@ -1,0 +1,46 @@
+.rojo {
+    color: #FF0000;
+}
+.amarillo {
+    color: #ffff00;
+}
+.verde {
+    color: #00B050;
+}
+.celeste {
+    color: #4c9BD3;
+}
+.azul{
+    color: #366F91;
+}
+.naranja{
+    color: sandybrown;
+}
+.bg-rojo{
+    background-color: #FF0000;
+}
+.bg-amarillo {
+    background-color: #ffff00;
+}
+.bg-verde {
+    background-color: #00B050;
+}
+.bg-celeste {
+    background-color: #4c9BD3;
+}
+.bg-naranja{
+    background-color:sandybrown;
+}
+.bg-zul{
+    color: #366F91;
+}
+.contenedor{
+    width: 600px;
+    display: flex;
+}
+.pie{
+    width: 900px;
+    padding: 10px
+}
+
+
