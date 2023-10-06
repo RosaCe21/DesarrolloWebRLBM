@@ -1,0 +1,32 @@
+.enlace {
+    text-decoration: none;
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+.enlace:hover {
+    background-color: rgb(49, 7, 88);
+}
+.table tr th{
+    border: 1px  solid rgb(34, 6, 79);
+    font-size: 24px;
+    color: brown;
+    background-color: bisque;
+    padding: 10px;
+} 
+
+.table tr td{
+    border: 1px  solid rgb(34, 6, 79);
+    padding: 10px;
+    font-size: 20px;
+} 
+.table tr td a{
+    text-decoration: none;
+    background-color: rgba(161, 11, 81, 0.606);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
