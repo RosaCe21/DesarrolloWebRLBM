@@ -16,14 +16,16 @@
 
     <div id="elemento">
 
-</div>
+    </div>
 
      <script>
        function llenar(){
+            var htmml = '';    
             var n = parseInt(document.getElementById("tamano").value);
-                var htmml = '';
+                
                 for (var i = 1; i <= n; i++) {
-                    html+=`<input type="number" name="numeros"><br>`;
+                    html+=`<label for="numeros">Introduce el número: ${i}</label>
+                    <input type="number" name="numeros"><span></span><br>`;
                 }
                 html+='<button onclick="calcularMayor();"> Calcular Mayor </button>'
                 document.getElementById('elemento').innerHTML = html;
