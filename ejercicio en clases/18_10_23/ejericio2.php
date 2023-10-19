@@ -31,7 +31,7 @@
                 <td onclick="llenar('9')">9</td>
             </tr>
             <tr>
-            <td onclick="llenar('*')">*</td>    
+            <td onclick="borrar('*')">*</td>    
             <td onclick="llenar('0')">0</td>
                 <td onclick="limpiar()">limpiar</td>
                 
@@ -60,7 +60,10 @@
                 //var x = document.getElementById('contrasena');
                 //x.value += valor;
             }
-
+            function borrar() {
+            var a = document.getElementById('contrasena');
+                a.value = a.value.slice(0, -1);
+      }
         </script>
     </div>
 
