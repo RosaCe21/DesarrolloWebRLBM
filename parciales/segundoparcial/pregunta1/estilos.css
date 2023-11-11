@@ -1,0 +1,17 @@
+.contenedor{
+    width: 900px;
+    height: 43px;
+    background-color: yellow;
+   display: inline-flexbox;
+}
+.contenedor2{
+    width: 900px;
+    height: 40px;
+    background-color: orange; 
+    
+}
+.contenedor3{
+    width: 900px;
+    height: 100px;
+    background-color: white;
+}

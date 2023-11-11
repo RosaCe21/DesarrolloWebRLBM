@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="principal">
+        <form action="calendario.php">
+        <select id="meses">
+            <option value="01">Enero</option>
+            <option value="02">Febrero</option>
+            <option value="03">Marzo</option>
+            <option value="04">Abril</option>
+            <option value="05">Mayo</option>
+            <option value="06">Junio</option>
+            <option value="07">Julio</option>
+            <option value="08">Agosto</option>
+            <option value="09">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+        </select>
+        <select id="anios">
+            <option value="01">1975</option>
+            <option value="02">1976</option>
+            <option value="03">1977</option>
+            <option value="04">1978</option>
+            <option value="05">1979</option>
+            <option value="06">1980</option>
+            <option value="07">1981</option>
+            <option value="08">1982</option>
+            <option value="09">1983</option>
+            <option value="10">1984</option>
+            <option value="11">1985</option>
+            <option value="13">1987</option>
+            <option value="14">1988</option>
+            <option value="15">1989</option>
+            <option value="16">1990</option>
+        </select>
+        <input type="submit" value="Mostrar Calendario">
+    </div>
+
+        <div id="resultado">
+            
+         </div>
+
+    <script>
+        function actualizarCalendario(anio, mes) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "calendario.php?anio=" + anio + "&mes=" + mes, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("resultado").innerHTML = xhr.responseText;
+                }
+            };
+
+            xhr.send();
+        }
+        function seleccionCambiada() {
+            var mesSeleccionado = document.getElementById("meses").value;
+            var anioSeleccionado = document.getElementById("anios").value;
+            actualizarCalendario(anioSeleccionado, mesSeleccionado);
+        }
+        document.getElementById("meses").addEventListener("change", seleccionCambiada);
+        document.getElementById("anios").addEventListener("change", seleccionCambiada);
+    </script>
+</form>
+</body>
+</html>

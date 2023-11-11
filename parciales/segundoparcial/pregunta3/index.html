@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+
+<div id="principal"></div>
+
+<script>
+  document.getElementById("principal").addEventListener("click", function() {
+    fetch("formulario.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("principal").innerHTML = data;
+      });
+  });
+  document.getElementById("principal").addEventListener("click", function(e) {
+    if (e.target && e.target.id === "btnMostrarFormulario") {
+      fetch("introducir.php")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("principal").innerHTML = data;
+          document.querySelectorAll(".numero").forEach(function(input) {
+            input.addEventListener("input", function() {
+              var suma = 0;
+              document.querySelectorAll(".numero").forEach(function(numero) {
+                var valor = parseFloat(numero.value) || 0;
+                suma += valor;
+              });
+              document.getElementById("suma").innerText = "Suma: " + suma;
+            });
+          });
+        });
+    }
+  });
+</script>
+
+</body>
+</html>
