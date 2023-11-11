@@ -1,0 +1,11 @@
+.contenedor {
+    
+    display: flex;
+    margin:auto;
+}
+.contenedor2{
+   
+    display: flex;
+    margin:1px;
+    flex-wrap: wrap;
+}
