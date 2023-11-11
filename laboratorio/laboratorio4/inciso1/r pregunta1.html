@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Estudianntes</title>
+</head>
+<body>
+    <h1>Mostrar Estudianntes</h1>
+    <button onclick="mostrar();">Mostrar</button>
+    <div id="lista"></div>
+
+    <script>
+        function mostrar() {
+            let lista = document.getElementById("lista");
+            fetch('lista.php')
+                .then(response => response.text())
+                .then(data => {
+    let list = JSON.parse(data)
+    let html = `<table border="1">
+      <tr>
+     <th>Nro</th>
+    <th>Apellidos Nombres</th>
+    <th>Edad</th>
+    <th>Materia</th>
+     <th>Nota</th>
+    </tr>`;
+        list.forEach(texto => {
+        html += `<tr>
+            <td>${texto.nro}</td>
+            <td>${texto.nombres} ${texto.apellidos}</td>
+            <td>${texto.edad}</td>
+            <td>${texto.materia}</td>
+            <td>${texto.nota}</td>
+            </tr>`;
+         });
+
+      html += `</table>;`
+      lista.innerHTML = html;
+         });
+        }
+    </script>
+</body>
+</html>
+
+
+

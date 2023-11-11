@@ -1,0 +1,15 @@
+.div{
+    background-color: rgb(107, 107, 221);
+   
+}
+.contenedor {
+    width: 1500px;
+    display: flex;
+    margin:auto;
+}
+.contenedor1{
+    width: 700px;
+}
+.margen{
+    padding-left: 24px;
+}
