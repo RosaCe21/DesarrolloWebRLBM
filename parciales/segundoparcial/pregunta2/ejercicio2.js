@@ -18,8 +18,8 @@ function mostrarResultado() {
     var oper = parseFloat(document.querySelector('input[name="operacion"]:checked').value);
 
    for(i=1;i<=num1;i++){
-   
-    if(oper == 1){
+     if(oper == 1){
+
         var resultado = i + num2;
     
     }

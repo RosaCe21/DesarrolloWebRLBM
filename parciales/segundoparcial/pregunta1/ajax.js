@@ -1,4 +1,4 @@
-function llamarbotones(abrir) {
+function llamarbotones() {
 	var contenedor;
 	contenedor = document.getElementById('menu');
 	var ajax = new XMLHttpRequest()  

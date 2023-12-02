@@ -7,7 +7,7 @@ function insertarMasivo() {
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: 'cantidadLibros=' + encodeURIComponent(cantidadLibros),
+    body: 'cantidadLibros=' + cantidadLibros,
   })
   .then(response => response.json())
   .then(data => {
@@ -32,7 +32,7 @@ function insertarPorFecha() {
 }
 
 function listarLibros() {
-  fetch('listar.php')
+  fetch('forminsertarmasivo.php')
   .then(response => response.json())
   .then(data => {
     console.log(data);
