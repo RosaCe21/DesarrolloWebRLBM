@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
     <div class="body">
@@ -19,17 +19,21 @@
             </div>
             <div id="subcontainer">
                 <div id="menu">
-                    <li><a>Pregunta 1</a></li>
-                    <li><a>Pregunta 2</a></li>
-                    <li><a>Pregunta 3</a></li>
-                    <li><a>Pregunta 4</a></li>
-                    <li><a>Pregunta 5</a></li>
+                    <li><a href="javascript:cargarPregunta1()">Pregunta 1</a></li>
+                    <span class="linea"></span>
+                    <li><a href="javascript:cargarPregunta2()">Pregunta 2</a></li>
+                    <span class="linea"></span>
+                    <li><a href="javascript:cargarPregunta3()">Pregunta 3</a></li>
+                    <span class="linea"></span>
+                    <li><a href="javascript:cargarContenidoAjax('pregunta4.php', 'Pregunta 4')">Pregunta 4</a></li>
+                    <span class="linea"></span>
+                    <li><a href="javascript:cargarContenidoAjax('pregunta5.php', 'Pregunta 5')">Pregunta 5</a></li>
                 </div>
                 <div id="titulo">
                     Titulo
                 </div>
                 <div id="contenido">
-                    <div class="target">
+                    <div class="target" id="target">
                         <div class="header-target">
                             <h3 style="padding:4px">SIS 256 Programación Web</h3>
                             <p style="padding:4px">Examen Final - 02-12-2023 7:00 am</p>
@@ -50,5 +54,8 @@
             <p>Sucre - Semestre 2-2023</p>
         </div>
     </div>
+
+    <script src="ajax.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
